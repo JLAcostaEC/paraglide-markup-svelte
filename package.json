@@ -1,6 +1,6 @@
 {
 	"name": "@jlacostaec/paraglide-markup-svelte",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"description": "Type-safe Svelte 5 renderers for Paraglide messages that contain markup, with a default CSS build and a Tailwind build.",
 	"keywords": [
 		"svelte",
