@@ -34,8 +34,8 @@
 		"test:unit": "vitest",
 		"deploy": "pnpm run build && wrangler pages deploy",
 		"cf-typegen": "wrangler types src/worker-configuration.d.ts",
-    "changeset:version": "changeset version && git add --all",
-    "changeset:publish": "changeset publish"
+		"changeset:version": "changeset version && git add --all",
+		"changeset:publish": "changeset publish"
 	},
 	"files": [
 		"dist",
