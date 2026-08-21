@@ -33,7 +33,9 @@
 		"test": "npm run test:unit -- --run && npm run test:e2e",
 		"test:unit": "vitest",
 		"deploy": "pnpm run build && wrangler pages deploy",
-		"cf-typegen": "wrangler types src/worker-configuration.d.ts"
+		"cf-typegen": "wrangler types src/worker-configuration.d.ts",
+    "changeset:version": "changeset version && git add --all",
+    "changeset:publish": "changeset publish"
 	},
 	"files": [
 		"dist",
