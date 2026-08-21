@@ -1,4 +1,26 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Hello, {name} from es!"
+	"hello_world": "Hola, {name} desde es!",
+	"plain_text": "Texto plano sin marcado.",
+	"greeting_rich": "Hola {name}, bienvenido a {#strong}nuestro sitio{/strong}!",
+	"docs_link": "{#link to=|/docs|}Leer la documentación{/link}",
+	"about_anchor": "{#a href=|/about|}Sobre nosotros{/a}",
+	"external_link": "{#link href=|https://example.com/pricing|}Precios{/link}",
+	"protocol_relative_link": "{#link href=|//cdn.example.com/asset|}Recurso{/link}",
+	"mail_link": "{#link href=|mailto:hello@example.com|}Escríbenos{/link}",
+	"tel_link": "{#link href=|tel:+15550100|}Llámanos{/link}",
+	"newtab_link": "{#link href=|/terms| @newtab @nofollow}Términos{/link}",
+	"forced_external_link": "{#link href=|/partner| @external}Socio{/link}",
+	"url_option_link": "{#link url=|/pricing| class=|cta-link|}Precios{/link}",
+	"inline_styles": "{#strong}negrita{/strong} {#b}alias-negrita{/b} {#em}énfasis{/em} {#i}alias-énfasis{/i} {#u}subrayado{/u} {#s}tachado{/s} {#mark}marcado{/mark} {#code}código{/code} {#small}pequeño{/small} {#sup}sup{/sup} {#sub}sub{/sub} {#muted}atenuado{/muted} {#nowrap}sin salto{/nowrap}",
+	"span_with_class": "{#span class=|extra-class|}Span con estilo{/span}",
+	"paragraphs": "{#p}Primer párrafo{/p}{#p class=|lead|}Segundo párrafo{/p}",
+	"bullet_list": "{#ul}{#li}Uno{/li}{#li}Dos{/li}{/ul}",
+	"numbered_list": "{#ol start=|3| type=|a| @reversed}{#li value=|5|}Cinco{/li}{#li}Seis{/li}{/ol}",
+	"invalid_ol": "{#ol start=|abc| type=|z|}{#li value=|not-a-number|}Elemento{/li}{/ol}",
+	"line_break": "Primera línea{#br/}Segunda línea",
+	"custom_badge": "Estado: {#badge level=|new|}Nuevo{/badge}",
+	"unknown_tag": "Hola {#unregistered}desconocido{/unregistered}!",
+	"nested_markup": "{#p}Una {#strong}frase en negrita {#em}y cursiva{/em}{/strong}.{/p}",
+	"markup_with_input": "{#link to=|/users|}perfil de {name}{/link}"
 }

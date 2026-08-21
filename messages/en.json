@@ -1,4 +1,26 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Hello, {name} from en!"
+	"hello_world": "Hello, {name} from en!",
+	"plain_text": "Plain text without markup.",
+	"greeting_rich": "Hello {name}, welcome to {#strong}our site{/strong}!",
+	"docs_link": "{#link to=|/docs|}Read the docs{/link}",
+	"about_anchor": "{#a href=|/about|}About us{/a}",
+	"external_link": "{#link href=|https://example.com/pricing|}Pricing{/link}",
+	"protocol_relative_link": "{#link href=|//cdn.example.com/asset|}Asset{/link}",
+	"mail_link": "{#link href=|mailto:hello@example.com|}Email us{/link}",
+	"tel_link": "{#link href=|tel:+15550100|}Call us{/link}",
+	"newtab_link": "{#link href=|/terms| @newtab @nofollow}Terms{/link}",
+	"forced_external_link": "{#link href=|/partner| @external}Partner{/link}",
+	"url_option_link": "{#link url=|/pricing| class=|cta-link|}Pricing{/link}",
+	"inline_styles": "{#strong}bold{/strong} {#b}alias-bold{/b} {#em}emph{/em} {#i}alias-emph{/i} {#u}under{/u} {#s}struck{/s} {#mark}marked{/mark} {#code}code{/code} {#small}small{/small} {#sup}sup{/sup} {#sub}sub{/sub} {#muted}muted{/muted} {#nowrap}no wrap{/nowrap}",
+	"span_with_class": "{#span class=|extra-class|}Styled span{/span}",
+	"paragraphs": "{#p}First paragraph{/p}{#p class=|lead|}Second paragraph{/p}",
+	"bullet_list": "{#ul}{#li}One{/li}{#li}Two{/li}{/ul}",
+	"numbered_list": "{#ol start=|3| type=|a| @reversed}{#li value=|5|}Five{/li}{#li}Six{/li}{/ol}",
+	"invalid_ol": "{#ol start=|abc| type=|z|}{#li value=|not-a-number|}Item{/li}{/ol}",
+	"line_break": "First line{#br/}Second line",
+	"custom_badge": "Status: {#badge level=|new|}New{/badge}",
+	"unknown_tag": "Hello {#unregistered}stranger{/unregistered}!",
+	"nested_markup": "{#p}A {#strong}bold {#em}and italic{/em}{/strong} sentence.{/p}",
+	"markup_with_input": "{#link to=|/users|}{name}'s profile{/link}"
 }

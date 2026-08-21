@@ -1,6 +1,24 @@
 {
-	"name": "paraglide-markup-svelte",
+	"name": "@jlacostaec/paraglide-markup-svelte",
 	"version": "0.0.1",
+	"description": "Type-safe Svelte 5 renderers for Paraglide messages that contain markup, with a default CSS build and a Tailwind build.",
+	"keywords": [
+		"svelte",
+		"svelte5",
+		"paraglide",
+		"inlang",
+		"i18n",
+		"markup",
+		"tailwindcss"
+	],
+	"author": {
+		"name": "Jorge Acosta",
+		"url": "https://github.com/JLAcostaEC"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/JLAcostaEC/paraglide-markup-svelte.git"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run prepack",
@@ -20,7 +38,12 @@
 	"files": [
 		"dist",
 		"!dist/**/*.test.*",
-		"!dist/**/*.spec.*"
+		"!dist/**/*.spec.*",
+		"!dist/**/*.spec-d.*",
+		"!dist/__tests__",
+		"!dist/example.svelte",
+		"!dist/example.svelte.d.ts",
+		"!dist/paraglide"
 	],
 	"sideEffects": [
 		"**/*.css"
@@ -32,14 +55,24 @@
 		".": {
 			"types": "./dist/index.d.ts",
 			"svelte": "./dist/index.js"
-		}
+		},
+		"./tailwindcss": {
+			"types": "./dist/tailwindcss/index.d.ts",
+			"svelte": "./dist/tailwindcss/index.js"
+		},
+		"./package.json": "./package.json"
 	},
 	"peerDependencies": {
+		"@inlang/paraglide-js": ">=2.18.2 <3",
+		"@inlang/paraglide-js-svelte": "1.0.4",
 		"svelte": "^5.0.0"
 	},
 	"devDependencies": {
+		"@changesets/changelog-github": "^1.0.0",
+		"@changesets/cli": "^3.0.1",
 		"@eslint/js": "^10.0.1",
 		"@inlang/paraglide-js": "^2.18.2",
+		"@inlang/paraglide-js-svelte": "1.0.4",
 		"@playwright/test": "^1.60.0",
 		"@sveltejs/adapter-auto": "^7.0.1",
 		"@sveltejs/adapter-cloudflare": "^7.2.9",
@@ -65,7 +98,8 @@
 		"vitest-browser-svelte": "^2.1.1",
 		"wrangler": "^4.122.0"
 	},
-	"keywords": [
-		"svelte"
-	]
+	"engines": {
+		"node": ">=22"
+	},
+	"packageManager": "pnpm@11.4.0"
 }
